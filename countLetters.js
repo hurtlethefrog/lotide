@@ -5,7 +5,7 @@ const assertEqual = function(actual, expected) {
     console.log(`🤬️🤬️ Assertion failed: ${actual} !== ${expected}`);
   }
 };
-//a function that will count an array for me
+
 const counter = function(array, whatToFind) {
   let theCount = 0;
   for( let i = 0; i < array.length; i++) {
@@ -15,13 +15,28 @@ const counter = function(array, whatToFind) {
   } return theCount;
 }
 
+const countLetters = function(stringToCount) {
+  const totalsObj = {};
+  // remove whitespace from input
+  let noWhiteSpace = stringToCount.replace(/ /g,'');
+  // add keys to object for each unique letter, assign a value of 0
+  for (let i = 0; i < noWhiteSpace.length; i++) {
+    totalsObj[noWhiteSpace[i]] = 0;
+  }
+  // loop increasing correct value by 1 each time you encounter a letter
+  for (let i = 0; i < noWhiteSpace.length; i++) {
+    totalsObj[noWhiteSpace[i]] += 1;
+  }
+
+ return totalsObj;
+};
+
+console.log(countLetters('lighthouse in the house'));
+
 const countOnly = function(allItems, itemsToCount) {
-  // define empty object
   let resultObj = {};
-  //for in loop using the counter function to get the number of times name appears
   for (const name in itemsToCount) {
     console.log(name);
-    // what do do if name is found
     if (counter(allItems, name) > 0) {
       resultObj[name] = counter(allItems, name)
       } else {
@@ -29,21 +44,3 @@ const countOnly = function(allItems, itemsToCount) {
       }
   } return resultObj;
 };
-
-const firstNames = [
-  "Karl",
-  "Salima",
-  "Agouhanna",
-  "Fang",
-  "Kavith",
-  "Jason",
-  "Salima",
-  "Fang",
-  "Joe"];
-
-const result1 = countOnly(firstNames, { "Jason": true, "Karima": true, "Fang": true });
-
-console.log(result1)
-assertEqual(result1["Jason"], 1);
-assertEqual(result1["Karima"], undefined);
-assertEqual(result1["Fang"], 2);
