@@ -7,3 +7,5 @@ const tail = function(array) {
   return result;
 };
 
+module.exports = tail;
+
