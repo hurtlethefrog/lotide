@@ -1,7 +1,7 @@
 {
-  "name": "lotide",
+  "name": "@hurtlethefrog/lotide",
   "version": "1.0.0",
-  "description": "lighthouse library",
+  "description": "lighthouse library lodash exercise",
   "main": "assertArraysEqual.js",
   "directories": {
     "test": "tests"
@@ -13,7 +13,7 @@
     "type": "git",
     "url": "git+https://github.com/hurtlethefrog/lotide.git"
   },
-  "author": "",
+  "author": "Duncan Haran",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/hurtlethefrog/lotide/issues"
