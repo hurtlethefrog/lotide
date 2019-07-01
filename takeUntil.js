@@ -9,4 +9,4 @@ const takeUntil = function(array, cb) {
   }
 };
 
-modules.export = takeUntil;
+module.exports = takeUntil;

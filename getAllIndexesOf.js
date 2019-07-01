@@ -6,4 +6,4 @@ const getAllIndexesOf = function(arr, val) {
   return indexes;
 };
 
-modules.export = getAllIndexesOf;
+module.exports = getAllIndexesOf;

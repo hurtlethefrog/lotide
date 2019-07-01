@@ -7,4 +7,4 @@ const without = function(source, itemsToRemove) {
   } return withoutArr;
 };
 
-modules.export = without;
+module.exports = without;

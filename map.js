@@ -6,4 +6,4 @@ const map = function(array, cb) {
   return results;
 }
 
-modules.export = map;
+module.exports = map;
